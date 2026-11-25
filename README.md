@@ -1,1 +1,1 @@
-# cogsup-experimental-approach-project
+# Experimental Approach Final Project
