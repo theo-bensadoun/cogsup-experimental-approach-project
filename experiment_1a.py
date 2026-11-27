@@ -6,8 +6,8 @@ xpy.control.set_develop_mode()
 
 exp = xpy.design.Experiment(
     name=config1a.EXPERIMENT_NAME,
-    background_colour=config1a.BLACK,
-    foreground_colour=config1a.WHITE,
+    background_colour=config1a.BACKGROUND_COLOUR,
+    foreground_colour=config1a.TEXT_COLOUR,
 )
 
 exp.data_variable_names = [
@@ -19,8 +19,8 @@ exp.data_variable_names = [
 
 xpy.control.initialize(exp)
 
-fixation_cross = xpy.stimuli.FixCross(size=config1a.CROSS_SIZE, line_width=config1a.LINE_WIDTH_CROSS, colour=config1a.WHITE)
-fixation_cross_screen = xpy.stimuli.BlankScreen(colour=config1a.BLACK)
+fixation_cross = xpy.stimuli.FixCross(size=config1a.CROSS_SIZE, line_width=config1a.LINE_WIDTH_CROSS, colour=config1a.TEXT_COLOUR)
+fixation_cross_screen = xpy.stimuli.BlankScreen(colour=config1a.BACKGROUND_COLOUR)
 fixation_cross.plot(fixation_cross_screen)
 
 instructions = xpy.stimuli.TextScreen(
